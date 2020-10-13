@@ -6,18 +6,29 @@ var minorenne = 18;
 
 var anziano = 65;
 
-if (!isNaN(anniUtente)) {
+if (!isNaN(kmPercorsi) && !isNaN(anniUtente)) {
   console.log('è un numero');
+
+  var prezzoViaggio = kmPercorsi * 0.21;
+
+  console.log(prezzoViaggio);
+
+  if (anniUtente < minorenne ) {
+
+    var prezzoDaMostrare = prezzoViaggio - (prezzoViaggio * 20 / 100);
+
+    document.getElementById('costo').innerHTML = 'Grazie allo sconto del 20% il prezzo del tuo biglietto è di: ' + prezzoDaMostrare + '€';
+  } else if (anniUtente >= anziano) {
+
+    var prezzoDaMostrare = prezzoViaggio - (prezzoViaggio * 40 / 100);
+
+    document.getElementById('costo').innerHTML = 'Grazie allo sconto del 40% il prezzo del tuo biglietto è di: ' + prezzoDaMostrare + '€';
+  } else {
+    document.getElementById('costo').innerHTML = 'Il prezzo del tuo biglietto è di: ' + prezzoViaggio + '€';
+  }
+
 } else {
   console.log('Non è un numero');
-}
 
-var prezzoViaggio = kmPercorsi * 0.21;
-
-if (anniUtente <= minorenne ) {
-  document.getElementById('costo') = ('Grazie allo sconto del 20% il prezzo del tuo biglietto è di: ' + prezzoViaggio - (prezzoViaggio * 20 / 100)
-} else if (anniUtente >= anziano) {
-  document.getElementById('costo') = ('Grazie allo sconto del 40% il prezzo del tuo biglietto è di: ' + prezzoViaggio - (prezzoViaggio * 40 / 100));
-} else {
-  document.getElementById('costo')= ('Il prezzo del tuo biglietto è di: ' + prezzoViaggio;
+  alert('Inserire solo numeri e non lettere')
 }
