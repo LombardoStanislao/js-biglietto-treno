@@ -12,10 +12,12 @@ if (!isNaN(anniUtente)) {
   console.log('Non è un numero');
 }
 
-var prezzoViaggio = (kmPercorsi * 0,21);
-
-console.log(prezzoViaggio);
+var prezzoViaggio = kmPercorsi * 0.21;
 
 if (anniUtente <= minorenne ) {
-  console.log(prezzoViaggio * 20 / 100);
+  document.getElementById('costo') = ('Grazie allo sconto del 20% il prezzo del tuo biglietto è di: ' + prezzoViaggio - (prezzoViaggio * 20 / 100)
+} else if (anniUtente >= anziano) {
+  document.getElementById('costo') = ('Grazie allo sconto del 40% il prezzo del tuo biglietto è di: ' + prezzoViaggio - (prezzoViaggio * 40 / 100));
+} else {
+  document.getElementById('costo')= ('Il prezzo del tuo biglietto è di: ' + prezzoViaggio;
 }

@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 992px;
+  margin: auto;
+  height: 500px;
+  background-color: #317b82;
+  color: white;
+}
