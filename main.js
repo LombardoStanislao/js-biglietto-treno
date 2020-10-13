@@ -15,3 +15,7 @@ if (!isNaN(anniUtente)) {
 var prezzoViaggio = (kmPercorsi * 0,21);
 
 console.log(prezzoViaggio);
+
+if (anniUtente <= minorenne ) {
+  console.log(prezzoViaggio * 20 / 100);
+}
